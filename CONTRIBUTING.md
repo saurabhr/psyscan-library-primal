@@ -1,0 +1,24 @@
+# Contributing a task or experiment card
+
+1. Add your card as a single file:
+   - task card → `tasks/<name>.json`
+   - experiment card → `experiments/<name>.json`
+2. Validate it locally:
+   ```bash
+   pip install -e .  # installs the pinned psychscanner-primal version
+   python scripts/validate_contribution.py tasks/<name>.json
+   ```
+   This checks, in order: required fields are present, the filename/content
+   isn't a duplicate of an existing card, and — the hard requirement — **the
+   card actually runs end-to-end** against the built-in mock LLM. A card that
+   raises during a real run will not be merged.
+3. Regenerate the ledger and commit it:
+   ```bash
+   python scripts/index_ledger.py build
+   ```
+4. Open a PR. CI re-runs the same two checks on every changed card.
+
+This is separate from packaging a card for the Prime Intellect Hub
+(`environments/<name>/` in `psychscanner-primal`) — that flow still lives in
+the source repo and covers `verifiers`-style environment packages, not
+individual cards.

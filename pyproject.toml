@@ -1,0 +1,18 @@
+[project]
+name = "psyscan-library-primal"
+version = "0.1.0"
+description = "Public, versioned index of vetted task and experiment cards for psychscanner-primal."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "psychscanner-primal>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/saurabhr/psyscan-library-primal"
+Source = "https://github.com/saurabhr/psychscanner-primal"
+
+# ponytail: this index has no library code of its own (tasks/experiments are data,
+# scripts/ is dev tooling) — no [build-system]/[tool.setuptools] needed until it ships
+# an installable package.
