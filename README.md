@@ -1,5 +1,7 @@
 # psyscan-library-primal
 
+![logo](docs/logo.png)
+
 Public, versioned index of vetted task and experiment cards for
 [psychscanner-primal](https://github.com/saurabhr/psychscanner-primal),
 the slim, Hub-optimized distribution of psychscanner.
