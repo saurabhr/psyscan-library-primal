@@ -1,0 +1,24 @@
+title: psyscan-library-primal
+description: Public, versioned index of vetted task and experiment cards for psychscanner-primal.
+authors:
+  - name: Saurabh Ranjan
+
+repo: https://github.com/saurabhr/psyscan-library-primal
+branch: main
+
+launch_buttons:
+  molab: true
+  github: true
+  download: true
+
+dependencies:
+  mode: env
+
+toc:
+  - file: content/intro.md
+  - file: content/browsing.py
+    title: Browse the index
+  - file: content/contributing.md
+    title: Contributing a card
+  - url: https://github.com/saurabhr/psychscanner-primal
+    title: psychscanner-primal (source package)
